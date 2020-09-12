@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--==============================================counter script start==============================================-->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        setInterval(function() {
+            myTimer();
+        }, 1000);
+
+
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-100px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+
+        $(function() {
+            var navMain = $(".navbar-collapse");
+
+            navMain.on("click", "a", null, function() {
+                navMain.collapse('hide');
+            });
+        });
+    </script>
+    <!--==============================================counter script end==============================================-->
+
+    <!--==============================================counter css end==============================================-->
+    <style>
+        #navbar {
+            position: fixed;
+            /* Make it stick/fixed */
+            width: 100%;
+            transition: top 0.3s;
+            /* Transition effect when sliding down (and up) */
+        }
+
+
+        @-webkit-keyframes hue {
+            from {
+                -webkit-filter: hue-rotate(0deg);
+            }
+            to {
+                -webkit-filter: hue-rotate(-360deg);
+            }
+        }
+
+        @keyframes hue {
+            from {
+                -webkit-filter: hue-rotate(0deg);
+            }
+            to {
+                -webkit-filter: hue-rotate(-360deg);
+            }
+        }
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+        .card {
+            background-color: #e9ecef !important;
+        }
+    </style>
+
+    <!--==============================================counter css end==============================================-->
+
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- ========== Title ========== -->
+    <title>WECAN</title>
+    <!-- ========== Favicon Ico ========== -->
+    <!-- ========== STYLESHEETS ========== -->
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts Icon CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/et-line.css" rel="stylesheet">
+    <link href="assets/css/ionicons.min.css" rel="stylesheet">
+    <!-- Carousel CSS -->
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/social_icons.css" rel="stylesheet">
+    <link rel="icon" href="logous.png">
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-outter"></div>
+        <div class="loader-inner"></div>
+    </div>
+
+    <!--header start here -->
+    <header class="header navbar fixed-top navbar-expand-md" id="navbar">
+        <div class="container-fluid mr-3 px-3">
+
+            <a class="navbar-brand logo d-none d-lg-block" href="#">
+                <img src="logous.png" alt="WECAN" />
+            </a>
+            <a class="navbar-brand logo d-block d-lg-none" href="#">
+                <img src="logous.png" alt="WECAN" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headernav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="lnr lnr-text-align-right"></span>
+        </button>
+            <div class="collapse navbar-collapse flex-sm-row-reverse" id="headernav">
+                <ul class="nav navbar-nav menu">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">HOME</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="#event">GUIDANCE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#sponsor">HELPING HANDS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#abt">ABOUT</a>
+                    </li>
+                    <!--
+                    <li class="nav-item">
+                        <a class="nav-link " href="#contact">CONTACT US</a>
+                    </li>
+                -->
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--header end here-->
+
+    <!--cover section slider -->
+    <section id="home" class="home-cover">
+        <div class="cover_slider owl-carousel owl-theme">
+            <div class="cover_item" style="background: url('assets/img/bg/slider2.jpg');">
+                <div class="slider_content">
+                    <div class="slider-content-inner">
+                        <div class="container">
+                            <div class="slider-content-center">
+
+                                <strong class="cover-xl-text">WECAN</strong>
+                              <br><br>
+                                <h2 class="cover-title">
+                                    <span style="font-weight: 400;">JUST DO <span style="color:#f50136; font-weight: 600;"> IT</span>!
+                                     <!--
+                                 <span style="color:#f50136; font-weight: 600;"> IT</span>! Achieve <span style="color:#f50136; font-weight: 600;"> IT</span>! --></span>
+
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+    <!--cover section slider end -->
+    <!--EVENTS-->
+    <section class="pb100" id="event">
+        <div class="container">
+            <div class="section_title mb2 0">
+                <h3 class="title pt-5">
+                    GUIDANCE
+                </h3>
+            </div>
+        </div>
+        <!-- Events cards start -->
+        <div class="container mx-auto event_box">
+            <div class="row grid">
+                <div class="col-md-8 col-lg-6 text-center mb10">
+                    <div class="card card-body">
+                        <h1>Self Employment</h1>
+                        <p><i>"Nothing will work unless you do!"</i>
+                        </p>
+                        <div class="card_buttons">
+                            <a target=”_blank” href="#" data-toggle="modal" data-target="#selfemployment" class="btn btn-primary btn-rounded mr10">
+                                Read more!
+                                <i class="fa fa-angle-right fa1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-lg-6 text-center mb10">
+                    <div class="card card-body card_color">
+                      <h1>Competitive Exams</h1>
+                        <p>
+                        <i>  "It always seems impossible until it’s done"</i>-Nelson Mandela
+                        </p>
+                        <div class="card_buttons">
+                            <a target=”_blank” href="#" data-toggle="modal" data-target="#exams" class="btn btn-primary btn-rounded mr10">
+                                Read more!
+                                <i class="fa fa-angle-right fa1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        <!-- Events cards end -->
+
+    </section>
+    <!--Events end-->
+    <!-- About us start -->
+    <section class="pb100" id="abt">
+        <div class="container">
+            <div class="section_title">
+                <h3 class="title">
+                    About Page
+                </h3>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+                    <!--<h4>Our Page</h4> -->
+                    <p>
+                        wecan is the all in one page for resources to improve your education and achieve your dreams. We provide a decentralized zone with all the information regarding careers available and various career paths to achieve your dreams. With the industries expanding every day, more and more opportunities emerge each day. This becomes a source of confusion for students to choose the career and education paths, once they finish their schooling. wecan provides various legitimate information regarding the branches in education and the trending career paths with immense opportunities.
+                    </p>
+                    <p>
+
+                    We also provide consolidate and precise information regarding government employment opportunities in India and the technical approaches to crack the examinations. With the ever-growing demand in need of government officials, this site hopes to connect the approaches to attain their goals and excel at it.
+                    </p>
+                    <p>
+                        Not only do we focus on career paths, but we also throw light on the non-profits and non-government organizations that are thriving to help the students in need. This platform is a one-place-connect for all the educational help that a student requires. We believe that excellence in education, is excellence in life and wecan aims to deliver the same, instilling confidence of a bright future in every user to just do it!
+                    </p>
+                </div>
+
+
+
+
+
+            <!--event features end-->
+        </div>
+    </section>
+    <!--about us end -->
+
+<section class="bg-gray pb100" id="sponsor">
+        <div class="container">
+            <div class="section_title mb50">
+                <h3 class="title">
+                    Foundations
+                </h3>
+            </div>
+            <!--
+            <h3 class="cover-title" style="text-align: center;">
+                <span style="font-weight: 400;">Coming soon!</span>
+            </h3> -->
+            <div class="brand_carousel owl-carousel" id="owl2">
+                    
+                <div class="brand_item text-center mx-auto">
+                    <a href="https://agaram.in/" target="_blank"><img src="assets/img/brands/agaram.png" alt="brand"></a>
+                </div>
+                <div class="brand_item text-center mx-auto">
+                    <a href="https://www.maatramfoundation.com/" target="_blank"><img src="assets/img/brands/maatram.png" alt="brand"></a>
+                </div>
+                <div class="brand_item text-center mx-auto">
+                    <a href="http://www.mugavarifoundation.org/" target="_blank"><img src="assets/img/brands/mugavari.png" alt="brand"></a>
+                </div>
+                  
+                <div class="brand_item text-center mx-auto">
+                    <a href="https://www.imaigal.org" target="_blank"><img src="assets/img/brands/imaigal.png" alt="brand"></a>
+                </div>
+                <div class="brand_item text-center mx-auto">
+                  <a href="https://agaram.in/" target="_blank"><img src="assets/img/brands/agaram.png" alt="brand"></a>
+              </div>
+              <div class="brand_item text-center mx-auto">
+                  <a href="https://www.maatramfoundation.com/" target="_blank"><img src="assets/img/brands/maatram.png" alt="brand"></a>
+              </div>
+              <div class="brand_item text-center mx-auto">
+                  <a href="http://www.mugavarifoundation.org/" target="_blank"><img src="assets/img/brands/mugavari.png" alt="brand"></a>
+              </div>
+               
+              <div class="brand_item text-center mx-auto">
+                  <a href="https://vidhyavidhai.org/" target="_blank"><img src="assets/img/brands/vidhai.png" alt="brand"></a>
+              </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- self employment modal start -->
+
+    <div class="modal fade" id="selfemployment" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalTitle">Self Employment</h5>
+                    <div class="table-responsive">
+                <table class="table-bordered table-striped table-sm  text-dark" style="text-align:center">
+                  <thead>
+                  <tr>
+                    <th>Company Profile</th>
+                    <th>Programs</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>District industries centre
+                (http://www.msmeonline.tn.gov.in)</td>
+                    <td><p>1.PMEGP-The Prime Minister’s Employment Generation Program provides loans of Rs.25 lakhs to industry and Rs.10 lakhs to service professionals.35%subsidy is given to those living in rural areas and 25% to those living in urban areas.</p>
+                        <p>2.UYEGP-Job Creation Scheme for unemployed youth-Loans up to Rs.5lakhs-15%subsidy.</p>
+                        <p>3.NEEDS-New Business Creation Scheme-5 lakh to 1 crore loan 20% subsidy.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Women’s Program(SHG)
+                (http://www.tn.gov.in/d/tp/shg.htm)
+                    </td>
+                    <td>
+                  <p>1.Direct Savings Credit Scheme</p>
+                  <p>2.Economic Development Scheme</p>
+                    </td>
+                </tr>
+                  <tr>
+                    <td>Tamilnadu Adithravidar Housing Development Corporation(TNHDCO)
+                (http://www.tahdco.tn.gov.in)
+                    </td>
+                    <td>
+                      <p>1.Personal loan of Rs.6000 to Rs.7.50 lakhs will be provided.30% as a grant loan amount will be provided.</p>
+                        <p>2.Individual agricultural loans ranging from Rs.60,000 to 750 lakhs will be provided.50% loan amount will be provided.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Tamilnadu Industrial Co-operative Bank(TAICO)
+                (www.taicobank.com)
+                    </td>
+                    <td>
+                      1.For Adithravidas who want to buy auto and become self-employed,upto Rs.1 lakh is provided with loan subsidy.
+                  Minorities can get it with the help of TAMCO.</td>
+                </tr>
+                  <tr>
+                    <td>Tamilnadu Bachward Classes Economic Development Corporation Ltd(TABCEDCO)
+                (www.tn.gov.in/bcmbcmw)
+                    </td>
+                    <td>
+                    <p>1.Short Loan(Xerox Machine,Pump set,Medical shop,Provision store)Loan up to Rs.1 lakh</p>
+                    <p>2.Credit Assistance scheme for purchase of dairy cows through Avin Company.</p>
+                    <p>3.Short Credit (Pet shop,flower and vegetable storageRs.20001 to Rs.30,000)</p>
+                    <p>4.Rs.50,000 to Rs.1 lakh for women through the new Suvarnima loan scheme.</p>
+                    </td>
+                </tr>
+                  <tr>
+                    <td>
+                      Tamilnadu Minorities Economic Development Corporation Ltd(TAMCO)
+                (www.tn.gov.in/bcmbcmw)
+                    </td>
+                    <td>
+                      <p>1.Education Loan up to Rs.50,000 per annum.2 lakh 50,000/-for 5 years is provided.</p>
+                      <p>2.Rs.1 lakh for auto purchase  is provided.</p>
+                      <p>3.Rs.25,000 is provided by small scale loan assistance scheme.</p>
+                      <p>4.Dairy cows loan ranging from Rs.50,000 to rs.70,000 through the Purchase Loan Assistance scheme is provided.</p>
+                      <p>5.Personal loan ranges from Rs.1 lakh to 5 lakh.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Nationalised Bank</td>
+                    <td><p>1.Education loan</p>
+                      <p>2.Self Employment loan for all government schemes.</p>
+                      </td>
+                </tr>
+                  <tr>
+                    <td>
+                      Micro Small Medium Enterprises(MSME),Guindy,Chennai-32.(www.msmedi-chennai.gov.in)
+                    </td>
+                    <td>
+                      They are taught how to buy,how to prepare goods,how to sell in the market,and how to maintain an account.
+                    </td>
+                  </tr>
+                </tbody>
+                </table>
+                </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- self employment modal end -->
+
+    <!-- competitive modal start -->
+
+    <div class="modal fade" id="exams" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalTitle">Exams</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                  <div class="table-responsive">
+              <table class="table-bordered table-striped table-sm  text-dark" style="text-align:center">
+                <thead>
+                <tr>
+                  <th>Recruiting Agency </th>
+                  <th>Name of the Post</th>
+                </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><p>Indian Army</p>
+                      <p>(www.indianarmy.nic.in)</p>
+                    </td>
+                    <td>
+                      <p>Constable General Duty,</p>
+                      <p>Mahila Constable,</p>
+                      <p>Junior Commisioned officer-Catering</p>
+                    </td>
+                  </tr>
+                    <tr>
+                      <td>
+                        <p>Indian Navy</p>
+                        <p>(www.indiannavy.nic.in)</p>
+                      </td>
+                      <td>
+                        <p>Cadet entry-Technical Sailor </p>
+                        <p>Artificer</p>
+                        <p>Apprentice</p>
+                      </td>
+                    </tr>
+                      <tr>
+                        <td>
+                          <p>TamilNadu Public Service Commision(TNPSC)</p>
+                          <p>www.tnpsc.gov.in</p>
+                        </td>
+                        <td>
+                          <ol>
+                            <li>Village Administrative Officer(VAO)</li>
+                            <li>Punch Operator</li>
+                            <li>Group IV:
+                            <ol>
+                              <li>Junior Assistant</li>
+                              <li>Typist</li>
+                              <li>Steno-Typist</li>
+                            </ol>
+                          </li>
+                          <li>Group VIII:
+                            <ol>
+                              <li>Executive Officer(Grade IV)</li>
+                              <li>Bill Collector Grade-I(Ministerial and Judicial Services)</li>
+                              <li>Field Surveyor(Survey Department)</li>
+                            </ol>
+                          </li>
+                          </ol>
+                        </td>
+                      </tr>
+                        <tr>
+                          <td>
+                          <p>  Railway Recruitment Board(RRB)</p>
+                            <p>www.indianrailways.gov.in</p>
+                          </td>
+                          <td>
+                            <ol><li>Constable</li>
+                              <li>Trackman</li>
+                              <li>Assistant Pointsman</li>
+                              <li>Helper</li>
+                              <li>Gangman</li>
+                              <li>Safaiwala</li>
+                              <li>Peon</li>
+                              <li>Multi Tasking Staff</li>
+                              <li>Transport assistant</li>
+                                <li>  Inquiry cum Reservation clerk.</li>
+                                <li>Soldier-General Duty</li>
+                                <li>  Multi Tasking Staff</li>
+                                <li>Soldier Tradesman</li>
+                          </td>
+                        </tr>
+                          <tr>
+                            <td>
+                              <p>Indian Postal Department</p>
+                              <p>(www.indiapost.gov.in)</p>
+                            </td>
+                            <td>
+                              <ol>
+                              <li>Postman</li>
+                              <li>Mail Guard</li>
+                              <li>Multi Tasking Staff</li>
+                              </ol>
+                            </td>
+                          </tr>
+                            <tr>
+                              <td>
+                                <p>Tamilnadu Uniform Services Recruitment Board</p>
+                                <p>(www.tnusrb.gov.in)</p>
+                              </td>
+                              <td>
+                                <ol>
+                                  <li>Police constable</li>
+                                  <li>Fireman</li>
+                                </ol>
+                              </td>
+                            </tr>
+                              <tr>
+                                <td>
+                                  <p>Central Reserve Police Force(CRPF)</p>
+                                  <p>(www.crpf.nic.in)</p>
+                                </td>
+                                <td>
+                                  <ol>
+                                  <li>Constable</li>
+                                </ol>
+                                </td>
+                              </tr>
+                </tbody>
+              </table>
+            </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- competitive modal end -->
+
+
+    <div class="copyright_footer">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-12">
+                    <p style="color:#F50136;font-weight:bolder;font-size:14px;text-align: center;">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer end -->
+
+    <!-- jquery -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <!--slick carousel -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--parallax -->
+    <script src="assets/js/parallax.min.js"></script>
+    <!--Counter up -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!--Counter down -->
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <!-- WOW JS -->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- Custom js -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
